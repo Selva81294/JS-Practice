@@ -1,0 +1,31 @@
+Hoisting:
+    Hoisting is the default behaviour of moving all the declarations at the top of the scope 
+    before code execution.
+In Fuction de4claration we can call anywhere(top or bottom).
+in Functon Expression(let,const,var) we can only call at the bottom after declaration.
+
+Call by value: (premitive value)
+    It is applicable only to premitive data types(numbers,strings,booleans)
+example:
+    var a = 24;
+    var b = a;
+    a = 25;
+    console.log(a) === 25
+    console.log(b) ==== 24
+
+here, we can't update value of b through premitive data types(numbers,strings,booleans)
+
+to overcome this call by refence is found
+
+
+Call by Reference: (reference value)
+    It is applicable to refence data types (array,object,function)
+example:
+    var a = {
+       value: 24,
+    }
+    var b= a;
+    a.value = 25;
+    console.log(a); ==== 25
+    console.log(b); ==== 25
+here we can change value of b through reference data types (array,object,function) 

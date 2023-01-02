@@ -1,0 +1,102 @@
+1. MRF (Map Reduce Filter)
+2. forEach
+3. Destructing
+--------------------------
+//MRF (Map Reduce Filter)
+* it is array method
+* to overcome memory consumption and time consumption
+* to reduce the lines of codes
+* Realtime usage: it is used extract the data frm API.
+===> Map
+# it takes function as parameter and apply for each and every element in an array
+# it return an array
+Syntax:
+arrayname.map((function))
+# maximum arrow function be used
+example:
+var res = arr.map(()=>{})
+console.log(res)
+Example:
+var arr = [12,14,15,50];
+//expected output = [24,28,30,100] ====> multiply by 2
+var res = arr.map((element)=>element*2)
+console.log(res)
+Example using XMLHttpRequest for map:(restcountries)
+1. print the name,country,flag.
+-----------------------------------------------------
+===>filter
+* used to filter an array to expected output
+Syntax:
+arrayname.filter((function))
+//Example 1
+/* var arr = [12,13,14,16];
+//expected output = [12,14] ====> %2 == 0
+var res = arr.filter((ele)=>ele%2 == 0)
+console.log(res) */
+//Example2
+/* let request = new XMLHttpRequest();
+request.open("GET","https://restcountries.com/v3.1/all");
+request.send();
+request.onload =function(){
+    let data = request.response
+    let result = JSON.parse(data);
+    let res = result.filter((ele)=>ele.population<30000)
+    console.log(res);
+} */
+----------------------------------------------
+===>Reduce
+* used to reduce an array into single values()
+--------if initial value not declared automatically first value taken as initial value------- 
+Syntax:
+arrayname.reduce((acc,cv)=>{})
+acc==> accumulator(intial value)
+cv==> current value
+//the final output of reduce ia a value
+
+//first case(without initial value)
+Example:
+let arr = [10,20,30,40];
+let res = arr.reduce((acc,cv)=>acc+cv);
+console.log(res);
+//second case(with initial value)
+let arr = [10,20,30,40];
+let res = arr.reduce((acc,cv)=>acc+cv,100);
+console.log(res);
+--------------------------------------------------
+
+//forEach:to print array elements
+* it is applicable only for arrays
+* it takes function as parameter
+* it will apply on each and every element
+* it returns undefined 
+* it is unidirectional
+* it is generally used for printing purpose
+Example:
+let arr = [12,13,14,15]
+let res = arr.forEach((ele)=> console.log(ele))
+Example using XMLHttpRequest:
+let request = new XMLHttpRequest();
+request.open("GET","https://restcountries.com/v3.1/all");
+request.send();
+request.onload =function(){
+    let data = request.response
+    let result = JSON.parse(data);
+    let res = result.forEach((ele)=>{console.log(`${ele.name.common} ${ele.capital} ${ele.region}`)})
+}
+----------------------------------------------
+Destructing:-
+* expanding array elements
+* similar to spread operator
+* it allows us to unpack the array elements into bunch of variables.
+Eg 1:
+let arr = ["selva","vijay"]
+let arr = [Fname,Lname];
+console.log(Fname);
+console.log(Lname);
+Eg 2:
+let arr = ["selva","kumaran","vijay"]
+let [Fname,Mname,Lname] = arr;
+console.log(Fname);
+console.log(Mname);
+console.log(Lname);
+----------------------------------------    

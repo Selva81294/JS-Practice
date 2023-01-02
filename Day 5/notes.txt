@@ -1,0 +1,97 @@
+Functions:
+    It is a set of statements that performs specific task 
+Syntax:
+Function Functionname(parameters if need) {
+    lines of code
+}
+Eg:
+function mul(a,b) {
+    console.log(a*b)
+}
+mul(1,2);
+
+//Function always have return 
+//return is used to reduce the number of time code execution.
+Eg:
+function mul(a,b,c) {
+    return a*b*c;
+}
+console.log(mul(2,2,2));
+
+//Functionname is user defined
+//if print without return then it shows undefined
+//function always have return
+//function is used for reduce DRY(Don't repeat yourself) codes
+//one function will have only one return keyword
+---------------------------------
+Types of Function:
+1. anonyomus function
+2. IIFE (Immediately Invoked Function Expression)
+3. Arrow Function ===> it invented in ES6(interview Ques)
+-----------------
+1. anonyomus function: a function without name
+Eg:
+let arr = [12,13,14,15,16,17,18,19,20];
+let result = [];
+let even = function(arr) {
+    for (i=0;i<arr.length;i++){
+        if (arr[i]%2 == 0)
+        {
+            result.push(arr[i]);
+        }
+    }
+    return result;
+}
+console.log(even(arr));
+--------------------------------
+2.IIFE
+   * An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as
+     it is defined.
+   * It is denoted inside the bracket() for make it priority to execute first
+Eg:
+(function even(arr) {
+    let result = [];
+    for (i=0;i<arr.length;i++){
+        if (arr[i]%2 == 0)
+        {
+            result.push(arr[i]);
+        }
+    }
+    console.log(result);
+})([2,3,4,5,6,7,8,9])
+----------------------------------------
+3. Arrow Function
+  * it is introduced in ES6
+  * it has a => keyword and return keyword is must
+Initially;
+function functionname(){
+
+}
+this is overcomed has;
+let functionname = (arr)=>{
+
+}
+-------------------------------
+Template Literals:
+syntax: 
+    '${Expression}'
+usage of backtick(`)
+EG:
+let a=2;
+let b=4;
+console.log(`the sum of a and b is ${a+b}`)
+...........................................
+spread operator
+let a = "guvi"
+console.log(...a)
+---------------------
+//Rest parameter
+function foo(a,b,...Rest){
+    let sum = 0;
+    for(i=0;i<Rest.length;i++){
+        sum = sum+Rest[i];
+    }
+    return sum;
+}
+console.log(foo(1,2,3,4,5))
+//ignored a and b values then output is the sum of rest values

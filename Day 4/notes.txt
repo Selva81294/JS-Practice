@@ -1,0 +1,22 @@
+//XMLHttpRequest
+
+Step 1 : to create XHR object
+syntax : let variablename = new XHMHttpRequest();
+
+Step 2 : Open a connection to a server
+3 parameters required ===> method (GET,POST,PUT,DELETE); URL(from where to get the data); Boolean(optional);
+syntax : variablename.open("method","URL")
+
+Step 3 : Inntiating a bridge to the server / sending the connection or request 
+syntax : variablename.send()
+--------------request completed--------------------------------
+Step 4 : Getting a response from the server
+syntax ; variablename.onload = function () {
+    var variablename1 = variablename.response
+    var result = JSON.parse(variablename1);
+}
+All types looping we can use for accessing the multiple values
+    for looping
+    for in looping
+    for of looping
+
